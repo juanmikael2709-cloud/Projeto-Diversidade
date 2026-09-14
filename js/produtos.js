@@ -78,6 +78,14 @@ const products = [
         imagem: "",
         cor: "roxo",
         link: "#"
+    },
+    {
+        nome: "Boné Orgulho Bordado",
+        preco: "R$ 69,90",
+        categoria: "Boné",
+        imagem: "",
+        cor: "roxo",
+        link: "#"
     }
     // 👆 Adicione novos produtos aqui, seguindo o mesmo formato
 ];
