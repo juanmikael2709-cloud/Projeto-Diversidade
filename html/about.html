@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos — Diversidade</title>
+    <title>Sobre nós — Diversidade</title>
     <link rel="stylesheet" href="/dist/output.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <style>
@@ -22,19 +22,19 @@
 
     <!-- 🧭 NAVBAR FIXA -->
     <header id="navbar" class="fixed top-0 left-0 w-full z-40 bg-black/95 backdrop-blur border-b border-stone-800">
-        <div class="max-w-[1400px] mx-auto px-4 md:px-8 h-[68px] flex items-center justify-between">
+        <div class="max-w-350 mx-auto px-4 md:px-8 h-17 flex items-center justify-between">
             <a href="./main.html" class="font-black text-xl md:text-2xl tracking-tighter uppercase text-white shrink-0">
                 Diversidade.
             </a>
 
             <nav class="hidden md:flex items-center gap-8 text-xs font-mono uppercase tracking-widest text-stone-300">
                 <a href="./main.html" class="hover:text-[#FF8B6B] transition">Início</a>
-                <a href="./products.html" class="text-[#FF8B6B]">Produtos</a>
-                <a href="./about.html" class="hover:text-[#FF8B6B] transition">Sobre nós</a>
+                <a href="./produtos.html" class="hover:text-[#FF8B6B] transition">Produtos</a>
+                <a href="./about.html" class="text-[#FF8B6B]">Sobre nós</a>
             </nav>
 
-            <a href="./products.html#catalogo"
-               class="hidden sm:inline-block bg-gradient-to-r from-[#FF5A3C] to-[#8B5CF6] text-white text-center font-bold uppercase tracking-wider text-[11px] px-5 py-3 rounded-xl hover:opacity-90 transition-all duration-300">
+            <a href="./produtos.html#catalogo"
+               class="hidden sm:inline-block bg-[#FF5A3C] text-white text-center font-bold uppercase tracking-wider text-[11px] px-5 py-3 rounded-xl hover:opacity-90 transition-all duration-300">
                 Ver coleção
             </a>
 
@@ -52,8 +52,8 @@
         <!-- Menu mobile expansível -->
         <div id="mobile-menu" class="md:hidden hidden flex-col border-t border-stone-800 bg-black px-4 py-4 gap-1">
             <a href="./main.html" class="block py-3 text-sm font-mono uppercase tracking-widest text-stone-300 hover:text-[#FF8B6B] transition">Início</a>
-            <a href="./products.html" class="block py-3 text-sm font-mono uppercase tracking-widest text-[#FF8B6B]">Produtos</a>
-            <a href="./about.html" class="block py-3 text-sm font-mono uppercase tracking-widest text-stone-300 hover:text-[#FF8B6B] transition">Sobre nós</a>
+            <a href="./produtos.html" class="block py-3 text-sm font-mono uppercase tracking-widest text-stone-300 hover:text-[#FF8B6B] transition">Produtos</a>
+            <a href="./about.html" class="block py-3 text-sm font-mono uppercase tracking-widest text-[#FF8B6B]">Sobre nós</a>
         </div>
     </header>
 
@@ -62,19 +62,37 @@
 
         <!-- CABEÇALHO DA PÁGINA -->
         <section class="bg-black text-white p-8 md:p-14">
-            <p class="text-xs font-mono uppercase tracking-widest text-[#FF8B6B] mb-3">// A Coleção</p>
+            <p class="text-xs font-mono uppercase tracking-widest text-[#8B5CF6] mb-3">// Quem Somos</p>
             <h1 class="text-3xl md:text-5xl font-black uppercase tracking-tight leading-none max-w-2xl">
-                Cada peça carrega uma história pra contar.
+                Um manifesto, uma comunidade e um motivo pra existir.
             </h1>
-            <p class="text-stone-400 text-sm md:text-base mt-4 max-w-xl leading-relaxed">
-                Camisetas, bonés e acessórios pensados por quem entende que representatividade não é tendência, é ponto de partida.
-            </p>
         </section>
 
-        <!-- GRID DE PRODUTOS (gerado via JavaScript a partir do array "products") -->
-        <section id="catalogo" class="p-6 md:p-12 scroll-mt-24">
-            <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Os cards de produto são inseridos aqui automaticamente pelo script -->
+        <!-- CONTEÚDO -->
+        <section class="p-8 md:p-14">
+            <div class="max-w-2xl">
+                <p class="text-stone-600 text-base md:text-lg font-medium leading-relaxed">
+                    Somos 4 alunos do curso técnico integrado ao Ensino Médio do
+                    <span class="font-bold text-black">IFSP Caraguatatuba</span>.
+                    Este e-commerce nasceu como um projeto proposto por um professor da escola,
+                    e nosso objetivo é usá-lo como ferramenta para trazer a diversidade
+                    para mais pessoas — através de moda, curadoria e representatividade.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mt-10 md:mt-12">
+                <div class="rounded-2xl border-2 border-stone-200 p-6">
+                    <p class="text-xs font-mono uppercase tracking-widest text-[#FF8B6B] mb-2">Escola</p>
+                    <p class="font-bold text-sm">IFSP Caraguatatuba</p>
+                </div>
+                <div class="rounded-2xl border-2 border-stone-200 p-6">
+                    <p class="text-xs font-mono uppercase tracking-widest text-[#8B5CF6] mb-2">Curso</p>
+                    <p class="font-bold text-sm">Técnico Integrado ao Ensino Médio</p>
+                </div>
+                <div class="rounded-2xl border-2 border-stone-200 p-6">
+                    <p class="text-xs font-mono uppercase tracking-widest text-[#14B8A6] mb-2">Equipe</p>
+                    <p class="font-bold text-sm">4 integrantes</p>
+                </div>
             </div>
         </section>
     </main>
@@ -93,7 +111,7 @@
                 <p class="text-xs font-mono uppercase tracking-widest text-[#14B8A6] mb-4">Navegação</p>
                 <ul class="space-y-2 text-sm text-stone-300">
                     <li><a href="./main.html" class="hover:text-[#FF8B6B] transition">Início</a></li>
-                    <li><a href="./products.html" class="hover:text-[#FF8B6B] transition">Produtos</a></li>
+                    <li><a href="./produtos.html" class="hover:text-[#FF8B6B] transition">Produtos</a></li>
                     <li><a href="./about.html" class="hover:text-[#FF8B6B] transition">Sobre nós</a></li>
                 </ul>
             </div>
@@ -101,14 +119,14 @@
             <div>
                 <p class="text-xs font-mono uppercase tracking-widest text-[#FFC145] mb-4">Fale com a gente</p>
                 <ul class="space-y-2 text-sm text-stone-300">
-                    <li><a href="mailto:contato@diversidade.com.br" class="hover:text-[#FF8B6B] transition">contato@diversidade.com.br</a></li>
+                    <li><a href="mailto:truethornmind@gmail.com" class="hover:text-[#FF8B6B] transition">truethornmind@gmail.com</a></li>
                     <li><a href="#" class="hover:text-[#FF8B6B] transition">Instagram</a></li>
                     <li><a href="#" class="hover:text-[#FF8B6B] transition">Termos de uso</a></li>
                 </ul>
             </div>
         </div>
 
-        <div class="h-[2px] w-full rounded-full bg-gradient-to-r from-[#FF5A3C] via-[#8B5CF6] to-[#14B8A6] mt-10 opacity-70"></div>
+        <div class="h-0.5 w-full rounded-full bg-linear-to-r from-[#FF5A3C] via-[#8B5CF6] to-[#14B8A6] mt-10 opacity-70"></div>
 
         <div class="mt-6 flex flex-col sm:flex-row justify-between gap-3 text-[10px] font-mono text-stone-500 uppercase tracking-widest">
             <span>© 2026 Diversidade. Todos os corpos, todas as mentes.</span>
@@ -116,136 +134,8 @@
         </div>
     </footer>
 
-    <!-- ⚙️ MENU MOBILE -->
-    <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const iconOpen = document.getElementById('icon-open');
-        const iconClose = document.getElementById('icon-close');
-
-        menuToggle.addEventListener('click', () => {
-            const isHidden = mobileMenu.classList.contains('hidden');
-            mobileMenu.classList.toggle('hidden');
-            mobileMenu.classList.toggle('flex');
-            iconOpen.classList.toggle('hidden');
-            iconClose.classList.toggle('hidden');
-            menuToggle.setAttribute('aria-expanded', String(isHidden));
-        });
-    </script>
-
-    <!-- 🛍️ PRODUTOS -->
-    <!--
-        PARA ADICIONAR UM NOVO PRODUTO:
-        Basta copiar um dos blocos { ... } abaixo e colar antes do "];" no final da lista,
-        preenchendo com os dados do novo item. Nada mais precisa ser alterado —
-        o card é criado automaticamente pelo script logo em seguida.
-
-        Campos:
-        - nome:      nome do produto (texto)
-        - preco:     preço já formatado, ex: "R$ 89,90"
-        - categoria: rótulo curto mostrado no card, ex: "Camiseta", "Boné", "Acessório"
-        - imagem:    caminho/URL da imagem do produto (deixe "" para usar um bloco de cor no lugar da foto)
-        - cor:       cor de destaque do card, uma de: "laranja", "roxo", "verde", "amarelo"
-        - link:      link do produto individual (opcional, use "#" se ainda não existir)
-    -->
-    <script>
-        const products = [
-            {
-                nome: "Camiseta Todas as Cores",
-                preco: "R$ 89,90",
-                categoria: "Camiseta",
-                imagem: "",
-                cor: "laranja",
-                link: "#"
-            },
-            {
-                nome: "Boné Orgulho Bordado",
-                preco: "R$ 69,90",
-                categoria: "Boné",
-                imagem: "",
-                cor: "roxo",
-                link: "#"
-            },
-            {
-                nome: "Tote Bag Manifesto",
-                preco: "R$ 54,90",
-                categoria: "Acessório",
-                imagem: "",
-                cor: "verde",
-                link: "#"
-            },
-            {
-                nome: "Camiseta Corpo Livre",
-                preco: "R$ 89,90",
-                categoria: "Camiseta",
-                imagem: "",
-                cor: "amarelo",
-                link: "#"
-            },
-            {
-                nome: "Pin Set Identidade",
-                preco: "R$ 39,90",
-                categoria: "Acessório",
-                imagem: "",
-                cor: "laranja",
-                link: "#"
-            },
-            {
-                nome: "Moletom Todas as Mentes",
-                preco: "R$ 159,90",
-                categoria: "Moletom",
-                imagem: "",
-                cor: "roxo",
-                link: "#"
-            }
-            // 👆 Adicione novos produtos aqui, seguindo o mesmo formato
-        ];
-
-        // Cores de destaque disponíveis para os cards
-        const paletas = {
-            laranja: { texto: "text-[#FF8B6B]", borda: "hover:border-[#FF5A3C]", fundo: "from-[#FF5A3C] to-[#8B5CF6]" },
-            roxo: { texto: "text-[#8B5CF6]", borda: "hover:border-[#8B5CF6]", fundo: "from-[#8B5CF6] to-[#14B8A6]" },
-            verde: { texto: "text-[#14B8A6]", borda: "hover:border-[#14B8A6]", fundo: "from-[#14B8A6] to-[#FFC145]" },
-            amarelo: { texto: "text-[#FFC145]", borda: "hover:border-[#FFC145]", fundo: "from-[#FFC145] to-[#FF5A3C]" }
-        };
-
-        function criarCardProduto(produto) {
-            const paleta = paletas[produto.cor] || paletas.laranja;
-
-            const imagemHtml = produto.imagem
-                ? `<img src="${produto.imagem}" alt="${produto.nome}" class="w-full h-full object-cover">`
-                : `<div class="w-full h-full bg-gradient-to-br ${paleta.fundo} flex items-center justify-center">
-                       <span class="text-white font-black uppercase text-xs tracking-widest opacity-70">Foto do produto</span>
-                   </div>`;
-
-            const card = document.createElement('a');
-            card.href = produto.link || "#";
-            card.className = `group bg-white rounded-3xl border-2 border-stone-200 ${paleta.borda} overflow-hidden flex flex-col transition-colors duration-300`;
-
-            card.innerHTML = `
-                <div class="w-full aspect-square overflow-hidden">
-                    ${imagemHtml}
-                </div>
-                <div class="p-6 flex flex-col gap-2 flex-1">
-                    <p class="text-[10px] font-mono uppercase tracking-widest ${paleta.texto}">${produto.categoria}</p>
-                    <h3 class="text-lg font-black uppercase tracking-tight leading-snug">${produto.nome}</h3>
-                    <div class="mt-auto flex items-center justify-between pt-4">
-                        <span class="font-bold text-base">${produto.preco}</span>
-                        <span class="text-xs font-bold uppercase tracking-wider border-b-2 border-transparent group-hover:border-black pb-1 transition-colors">
-                            Ver produto
-                        </span>
-                    </div>
-                </div>
-            `;
-
-            return card;
-        }
-
-        const grid = document.getElementById('products-grid');
-        products.forEach(produto => {
-            grid.appendChild(criarCardProduto(produto));
-        });
-    </script>
+    <!-- ⚙️ SCRIPT DA PÁGINA -->
+    <script src="../js/about.js"></script>
 
 </body>
 </html>
