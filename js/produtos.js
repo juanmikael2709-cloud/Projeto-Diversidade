@@ -35,7 +35,7 @@ const products = [
         nome: "Camiseta Todas as Cores",
         preco: "R$ 89,90",
         categoria: "Camiseta",
-        imagem: "",
+        imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW6qtKwU4GKWQUe0DQaXjn5ON8pCJy8qDE1rk2pa-9SQ&s=10",
         cor: "laranja",
         link: "#"
     },
@@ -43,7 +43,7 @@ const products = [
         nome: "Boné Orgulho Bordado",
         preco: "R$ 69,90",
         categoria: "Boné",
-        imagem: "",
+        imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFo-lXiSA1grTaW6kuMVaaLvzL7878q7dYpb5im_4pAg&s=10",
         cor: "roxo",
         link: "#"
     },
@@ -51,7 +51,7 @@ const products = [
         nome: "Tote Bag Manifesto",
         preco: "R$ 54,90",
         categoria: "Acessório",
-        imagem: "",
+        imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqrJOPiYrAgziRVmfOo88mP_zMEY89gkEBJyV0DtFqhw&s",
         cor: "verde",
         link: "#"
     },
@@ -59,7 +59,7 @@ const products = [
         nome: "Camiseta Corpo Livre",
         preco: "R$ 89,90",
         categoria: "Camiseta",
-        imagem: "",
+        imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSplTLnwi4Fja3o4riYHLV-mTp-_KYWn0myYqKLK4UJqg&s",
         cor: "amarelo",
         link: "#"
     },
@@ -67,7 +67,7 @@ const products = [
         nome: "Pin Set Identidade",
         preco: "R$ 39,90",
         categoria: "Acessório",
-        imagem: "",
+        imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb2FXBHZmaWM2K_Ta5ihwA6EFzv3QEtJ5SDLf0Ecb2Lw&s=10",
         cor: "laranja",
         link: "#"
     },
@@ -75,16 +75,16 @@ const products = [
         nome: "Moletom Todas as Mentes",
         preco: "R$ 159,90",
         categoria: "Moletom",
-        imagem: "",
+        imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDN7EAU9l-kZ459kR4RRTVNRRi-EvM4X9koOaM2jfJhQ&s=10",
         cor: "roxo",
         link: "#"
     },
     {
-        nome: "Boné Orgulho Bordado",
-        preco: "R$ 69,90",
-        categoria: "Boné",
-        imagem: "",
-        cor: "roxo",
+        nome: "Camiseta Corpo Livre",
+        preco: "R$ 89,90",
+        categoria: "Camiseta",
+        imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSplTLnwi4Fja3o4riYHLV-mTp-_KYWn0myYqKLK4UJqg&s",
+        cor: "amarelo",
         link: "#"
     }
     // 👆 Adicione novos produtos aqui, seguindo o mesmo formato
