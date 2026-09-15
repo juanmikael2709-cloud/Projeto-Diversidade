@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos — Diversidade</title>
+    <title>Sobre nós — Diversidade</title>
     <link rel="stylesheet" href="../dist/output.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <style>
@@ -29,8 +29,8 @@
 
             <nav class="hidden md:flex items-center gap-8 text-xs font-mono uppercase tracking-widest text-stone-300">
                 <a href="../index.html" class="hover:text-[#FF8B6B] transition">Início</a>
-                <a href="./produtos.html" class="text-[#FF8B6B]">Produtos</a>
-                <a href="./about.html" class="hover:text-[#FF8B6B] transition">Sobre nós</a>
+                <a href="./produtos.html" class="hover:text-[#FF8B6B] transition">Produtos</a>
+                <a href="./about.html" class="text-[#FF8B6B]">Sobre nós</a>
             </nav>
 
             <a href="./produtos.html#catalogo"
@@ -52,8 +52,8 @@
         <!-- Menu mobile expansível -->
         <div id="mobile-menu" class="md:hidden hidden flex-col border-t border-stone-800 bg-black px-4 py-4 gap-1">
             <a href="../index.html" class="block py-3 text-sm font-mono uppercase tracking-widest text-stone-300 hover:text-[#FF8B6B] transition">Início</a>
-            <a href="./produtos.html" class="block py-3 text-sm font-mono uppercase tracking-widest text-[#FF8B6B]">Produtos</a>
-            <a href="./about.html" class="block py-3 text-sm font-mono uppercase tracking-widest text-stone-300 hover:text-[#FF8B6B] transition">Sobre nós</a>
+            <a href="./produtos.html" class="block py-3 text-sm font-mono uppercase tracking-widest text-stone-300 hover:text-[#FF8B6B] transition">Produtos</a>
+            <a href="./about.html" class="block py-3 text-sm font-mono uppercase tracking-widest text-[#FF8B6B]">Sobre nós</a>
         </div>
     </header>
 
@@ -62,20 +62,37 @@
 
         <!-- CABEÇALHO DA PÁGINA -->
         <section class="bg-black text-white p-8 md:p-14">
-            <p class="text-xs font-mono uppercase tracking-widest text-[#FF8B6B] mb-3">// A Coleção</p>
+            <p class="text-xs font-mono uppercase tracking-widest text-[#8B5CF6] mb-3">// Quem Somos</p>
             <h1 class="text-3xl md:text-5xl font-black uppercase tracking-tight leading-none max-w-2xl">
-                Cada peça carrega uma história pra contar.
+                Um manifesto, uma comunidade e um motivo pra existir.
             </h1>
-            <p class="text-stone-400 text-sm md:text-base mt-4 max-w-xl leading-relaxed">
-                Camisetas, bonés e acessórios pensados por quem entende que representatividade não é tendência, é ponto de partida.
-            </p>
         </section>
 
-        <!-- GRID DE PRODUTOS: os cards são gerados por js/produtos.js a partir do array "produtos". -->
-        <!-- Para adicionar um produto novo, edite a lista "produtos" em js/produtos.js. -->
-        <section id="catalogo" class="p-6 md:p-12 scroll-mt-24">
-            <div id="produtos-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Os cards de produto são inseridos aqui automaticamente pelo script -->
+        <!-- CONTEÚDO -->
+        <section class="p-8 md:p-14">
+            <div class="max-w-2xl">
+                <p class="text-stone-600 text-base md:text-lg font-medium leading-relaxed">
+                    Somos 4 alunos do curso técnico integrado ao Ensino Médio do
+                    <span class="font-bold text-black">IFSP Caraguatatuba</span>.
+                    Este e-commerce nasceu como um projeto proposto por um professor da escola,
+                    e nosso objetivo é usá-lo como ferramenta para trazer a diversidade
+                    para mais pessoas — através de moda, curadoria e representatividade.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mt-10 md:mt-12">
+                <div class="rounded-2xl border-2 border-stone-200 p-6">
+                    <p class="text-xs font-mono uppercase tracking-widest text-[#FF8B6B] mb-2">Escola</p>
+                    <p class="font-bold text-sm">IFSP Caraguatatuba</p>
+                </div>
+                <div class="rounded-2xl border-2 border-stone-200 p-6">
+                    <p class="text-xs font-mono uppercase tracking-widest text-[#8B5CF6] mb-2">Curso</p>
+                    <p class="font-bold text-sm">Técnico Integrado ao Ensino Médio</p>
+                </div>
+                <div class="rounded-2xl border-2 border-stone-200 p-6">
+                    <p class="text-xs font-mono uppercase tracking-widest text-[#14B8A6] mb-2">Equipe</p>
+                    <p class="font-bold text-sm">4 integrantes</p>
+                </div>
             </div>
         </section>
     </main>
@@ -117,8 +134,8 @@
         </div>
     </footer>
 
-    <!-- ⚙️ SCRIPTS DA PÁGINA DE PRODUTOS -->
-    <script src="../js/produtos.js"></script>
+    <!-- ⚙️ SCRIPT DA PÁGINA -->
+    <script src="../js/about.js"></script>
 
 </body>
 </html>
