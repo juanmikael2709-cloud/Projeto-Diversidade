@@ -1,5 +1,4 @@
 // ⚙️ MENU MOBILE — Página de Produtos
-
 const menuToggle = document.getElementById('menu-toggle');
 const mobileMenu = document.getElementById('mobile-menu');
 const iconOpen = document.getElementById('icon-open');
@@ -14,83 +13,7 @@ menuToggle.addEventListener('click', () => {
     menuToggle.setAttribute('aria-expanded', String(isHidden));
 });
 
-
-// 🛍️ PRODUTOS
-//
-// PARA ADICIONAR UM NOVO PRODUTO:
-// Basta copiar um dos blocos { ... } abaixo e colar antes do "];" no final da lista,
-// preenchendo com os dados do novo item. Nada mais precisa ser alterado —
-// o card é criado automaticamente pela função criarCardProduto() logo em seguida.
-//
-// Campos:
-// - nome:      nome do produto (texto)
-// - preco:     preço já formatado, ex: "R$ 89,90"
-// - categoria: rótulo curto mostrado no card, ex: "Camiseta", "Boné", "Acessório"
-// - imagem:    caminho/URL da imagem do produto (deixe "" para usar um bloco de cor no lugar da foto)
-// - cor:       cor de destaque do card, uma de: "laranja", "roxo", "verde", "amarelo"
-// - link:      link do produto individual (opcional, use "#" se ainda não existir)
-
-const products = [
-    {
-        nome: "Camiseta Todas as Cores",
-        preco: "R$ 89,90",
-        categoria: "Camiseta",
-        imagem: "",
-        cor: "laranja",
-        link: "#"
-    },
-    {
-        nome: "Boné Orgulho Bordado",
-        preco: "R$ 69,90",
-        categoria: "Boné",
-        imagem: "",
-        cor: "roxo",
-        link: "#"
-    },
-    {
-        nome: "Tote Bag Manifesto",
-        preco: "R$ 54,90",
-        categoria: "Acessório",
-        imagem: "",
-        cor: "verde",
-        link: "#"
-    },
-    {
-        nome: "Camiseta Corpo Livre",
-        preco: "R$ 89,90",
-        categoria: "Camiseta",
-        imagem: "",
-        cor: "amarelo",
-        link: "#"
-    },
-    {
-        nome: "Pin Set Identidade",
-        preco: "R$ 39,90",
-        categoria: "Acessório",
-        imagem: "",
-        cor: "laranja",
-        link: "#"
-    },
-    {
-        nome: "Moletom Todas as Mentes",
-        preco: "R$ 159,90",
-        categoria: "Moletom",
-        imagem: "",
-        cor: "roxo",
-        link: "#"
-    },
-    {
-        nome: "Boné Orgulho Bordado",
-        preco: "R$ 69,90",
-        categoria: "Boné",
-        imagem: "",
-        cor: "roxo",
-        link: "#"
-    }
-    // 👆 Adicione novos produtos aqui, seguindo o mesmo formato
-];
-
-// Cores de destaque disponíveis para os cards (tons sólidos, sem gradiente)
+// Cores de destaque disponíveis para os cards
 const paletas = {
     laranja: { texto: "text-[#FF8B6B]", borda: "hover:border-[#FF5A3C]", fundo: "bg-[#FF5A3C]" },
     roxo: { texto: "text-[#8B5CF6]", borda: "hover:border-[#8B5CF6]", fundo: "bg-[#8B5CF6]" },
@@ -130,7 +53,36 @@ function criarCardProduto(produto) {
     return card;
 }
 
-const grid = document.getElementById('produtos-grid');
-products.forEach(produto => {
-    grid.appendChild(criarCardProduto(produto));
-});
+// 🛍️ CONEXÃO COM O SERVIDOR (Substitui a lista estática antiga)
+// 🔴 Endereço do servidor rodando no Render (HTTPS, sem porta customizada)
+const URL_SERVIDOR = "https://diversidade-server.onrender.com";
+const URL_API = `${URL_SERVIDOR}/produtos`;
+
+async function carregarProdutosDoServidor() {
+    const grid = document.getElementById('produtos-grid');
+    
+    try {
+        const resposta = await fetch(URL_API);
+        const dados = await resposta.json();
+        grid.innerHTML = '';
+
+        // Object.entries nos dá o ID (chave) e os dados do produto (valor)
+        Object.entries(dados.produtos).forEach(([id, produto]) => {
+            
+            // Criamos o card passando os dados
+            const card = criarCardProduto(produto);
+            
+            // 🔴 Apontamos o link diretamente para a rota do servidor correspondente ao ID
+            card.href = `${URL_SERVIDOR}/produto?id=${id}`;
+            
+            grid.appendChild(card);
+        });
+
+    } catch (erro) {
+        console.error("Erro ao buscar produtos da API:", erro);
+        grid.innerHTML = `<p class="text-stone-500 font-mono text-xs col-span-full text-center py-8">Não foi possível carregar os produtos.</p>`;
+    }
+}
+
+// Executa a busca assim que o script carregar
+carregarProdutosDoServidor();
